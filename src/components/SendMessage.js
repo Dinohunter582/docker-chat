@@ -4,7 +4,7 @@ import firebase from 'firebase'
 import { Button, Input } from '@material-ui/core'
 
 
-function SendMessage() {
+function SendMessage({scroll}) {
     const [msg, setMsg] = useState('')
 
     async function sendMessage(e){
@@ -17,6 +17,7 @@ function SendMessage() {
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
         })
         setMsg('')
+        scroll.current.scrollIntoView({ behavior: 'smooth' })
     }
     return (
         <div>
