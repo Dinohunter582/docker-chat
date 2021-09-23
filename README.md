@@ -1,5 +1,8 @@
 does not work in docker playground but will play just fine in docker desktop
 
+link to docker hub image: 
+https://hub.docker.com/r/dinohunter582/superchat
+
 to start the program in docker
     docker run \
     -it \
